@@ -18,7 +18,6 @@ export type Hackathon = {
   participationType: "individual" | "existing-team" | "ad-hoc-team"
   participationTypeLabel: string
   product: Product
-  award?: string
   result?: string
   zennLink?: string
   blogUrl?: string
@@ -104,7 +103,7 @@ export const hackathonData: HackathonData = {
       url: "https://othello-ai-contest.com/",
       participationType: "individual",
       participationTypeLabel: "個人参加",
-      award: "優勝",
+      result: "優勝",
       product: {
         title: "Othello AI Player",
         summary: "Monte Carlo Tree Searchを用いたオセロAI。高速な局面評価と探索アルゴリズム。",
@@ -122,8 +121,8 @@ export const hackathonData: HackathonData = {
       location: "オンライン",
       participationType: "ad-hoc-team",
       participationTypeLabel: "即席チーム",
-      award: "準優勝",
       result: "🥈準優勝",
+      zennLink: "https://zenn.dev/nana743533/articles/144b92a19d7c39",
       product: {
         title: "（プロダクト名）",
         summary: "ここに50文字程度の説明を記述します。どのような課題を解決するアプリか簡潔に。",

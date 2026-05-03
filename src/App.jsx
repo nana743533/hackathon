@@ -274,9 +274,9 @@ function App() {
                             {/* 成果・リンク */}
                             <td className="col-result">
                               <div className="result-cell">
-                                {(hackathon.award || hackathon.result) && (
+                                {(hackathon.result) && (
                                   <span className="result-award">
-                                    🏆 {hackathon.result || hackathon.award}
+                                    🏆 {hackathon.result}
                                   </span>
                                 )}
                                 {hackathon.zennLink && (
@@ -356,10 +356,10 @@ function App() {
                           {hackathon.location}
                         </div>
 
-                        {(hackathon.award || hackathon.result) && (
+                        {(hackathon.result) && (
                           <div className="mobile-award">
                             <span className="award-icon">🏆</span>
-                            {hackathon.result || hackathon.award}
+                            {hackathon.result}
                           </div>
                         )}
 
