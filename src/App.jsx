@@ -90,7 +90,7 @@ function ProductModal({ product, onClose }) {
               rel="noopener noreferrer"
               className="modal-link"
             >
-              デプロイ先
+              デモ
             </a>
           )}
           {product.demoUrl && (
@@ -191,7 +191,8 @@ function App() {
                         <th className="col-location">場所</th>
                         <th className="col-type">参加形式</th>
                         <th className="col-product">プロダクト</th>
-                        <th className="col-result">成果・リンク</th>
+                        <th className="col-results">成果</th>
+                        <th className="col-result-links">リンク</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -271,13 +272,49 @@ function App() {
                               </button>
                             </td>
 
-                            {/* 成果・リンク */}
-                            <td className="col-result">
-                              <div className="result-cell">
-                                {(hackathon.result) && (
-                                  <span className="result-award">
-                                    🏆 {hackathon.result}
+                            {/* 成果 */}
+                            <td className="col-results">
+                              <div className="results-cell">
+                                {hackathon.result?.map((r) => (
+                                  <span key={r} className="result-award">
+                                    {r}
                                   </span>
+                                ))}
+                              </div>
+                            </td>
+
+                            {/* リンク */}
+                            <td className="col-result-links">
+                              <div className="result-links-cell">
+                                {hackathon.product.github && (
+                                  <a
+                                    href={hackathon.product.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="result-link"
+                                  >
+                                    🐙 GitHub
+                                  </a>
+                                )}
+                                {hackathon.product.deploy && (
+                                  <a
+                                    href={hackathon.product.deploy}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="result-link"
+                                  >
+                                    🌐 デモ
+                                  </a>
+                                )}
+                                {hackathon.slideUrl && (
+                                  <a
+                                    href={hackathon.slideUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="result-link"
+                                  >
+                                    📊 スライド
+                                  </a>
                                 )}
                                 {hackathon.zennLink && (
                                   <a
@@ -286,7 +323,7 @@ function App() {
                                     rel="noopener noreferrer"
                                     className="result-link"
                                   >
-                                    Zenn
+                                    📝 Zenn
                                   </a>
                                 )}
                                 {hackathon.blogUrl && (
@@ -356,12 +393,11 @@ function App() {
                           {hackathon.location}
                         </div>
 
-                        {(hackathon.result) && (
-                          <div className="mobile-award">
-                            <span className="award-icon">🏆</span>
-                            {hackathon.result}
+                        {hackathon.result?.map((r) => (
+                          <div key={r} className="mobile-award">
+                            {r}
                           </div>
-                        )}
+                        ))}
 
                         <button
                           className="mobile-product-button"
@@ -383,7 +419,7 @@ function App() {
                               rel="noopener noreferrer"
                               className="mobile-link"
                             >
-                              Zenn
+                              📝 Zenn
                             </a>
                           )}
                           {hackathon.blogUrl && (
@@ -413,7 +449,7 @@ function App() {
                               rel="noopener noreferrer"
                               className="mobile-link"
                             >
-                              GitHub
+                              🐙 GitHub
                             </a>
                           )}
                           {hackathon.product.deploy && (
@@ -423,7 +459,17 @@ function App() {
                               rel="noopener noreferrer"
                               className="mobile-link"
                             >
-                              デプロイ先
+                              🌐 デモ
+                            </a>
+                          )}
+                          {hackathon.slideUrl && (
+                            <a
+                              href={hackathon.slideUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="mobile-link"
+                            >
+                              📊 スライド
                             </a>
                           )}
                         </div>

@@ -18,7 +18,8 @@ export type Hackathon = {
   participationType: "individual" | "existing-team" | "ad-hoc-team"
   participationTypeLabel: string
   product: Product
-  result?: string
+  result?: string[]
+  slideUrl?: string
   zennLink?: string
   blogUrl?: string
   imageUrl?: string
@@ -48,7 +49,7 @@ export const hackathonData: HackathonData = {
       url: "https://race-ss.co.jp/hackathon/2025/",
       participationType: "existing-team",
       participationTypeLabel: "既存チーム",
-      result: "🥇優勝、オーディエンス賞、プレゼンテーション賞",
+      result: ["🥇優勝", "オーディエンス賞", "プレゼンテーション賞"],
       product: {
         title: "マナべディア！",
         summary: "みんなの学びを促進する大学の過去問共有システム",
@@ -82,6 +83,7 @@ export const hackathonData: HackathonData = {
       url: "https://talent.supporterz.jp/events/d3f3860a-f64a-4bd9-8c4f-4f4ad2910b06",
       participationType: "individual",
       participationTypeLabel: "個人参加",
+      slideUrl: "https://speakerdeck.com/nanaseyuma/okutodui-zhan",
       product: {
         title: "オクト対戦",
         summary: "オセロの派生ボードゲーム「オクト」をリアルタイムで対戦できるスマホゲーム",
@@ -100,7 +102,7 @@ export const hackathonData: HackathonData = {
       url: "https://www.craftstadium.com/hackathon/hackathon-origin-2026",
       participationType: "ad-hoc-team",
       participationTypeLabel: "即席チーム",
-      result: "🥈準優勝、Zeronity賞、エクサウィザーズ賞、テックオーシャン賞",
+      result: ["🥈準優勝", "Zeronity賞", "エクサウィザーズ賞", "テックオーシャン賞"],
       product: {
         title: "UniAI",
         summary:
@@ -137,7 +139,7 @@ export const hackathonData: HackathonData = {
       url: "https://luma.com/z7439g5o",
       participationType: "ad-hoc-team",
       participationTypeLabel: "即席チーム",
-      result: "🏆Mixi賞",
+      result: ["🏆Mixi賞"],
       product: {
         title: "Manga Pose AR",
         summary: "カメラに向かってポーズをとるだけで漫画のワンシーンのような演出をAR表示するiOSアプリ",
@@ -156,7 +158,7 @@ export const hackathonData: HackathonData = {
       url: "https://progate.connpass.com/event/386402/",
       participationType: "ad-hoc-team",
       participationTypeLabel: "即席チーム",
-      result: "OB賞",
+      result: ["OB賞"],
       product: {
         title: "ファースト肯定ペンギン",
         summary: "最初に拍手した観客を検知してARでペンギン化し、肯定アクションをデータ化・分析するシステム",
@@ -175,6 +177,7 @@ export const hackathonData: HackathonData = {
       url: "https://talent.supporterz.jp/events/82c4c266-cde5-4b34-90fe-7c82d83a97dc/",
       participationType: "ad-hoc-team",
       participationTypeLabel: "即席チーム",
+      slideUrl: "https://speakerdeck.com/nanaseyuma/needea",
       zennLink: "https://zenn.dev/nana743533/articles/144b92a19d7c39",
       product: {
         title: "Needea",

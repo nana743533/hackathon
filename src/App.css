@@ -231,7 +231,8 @@ body {
 .col-location { width: 110px; }
 .col-type { width: 120px; }
 .col-product { min-width: 240px; }
-.col-result { width: 180px; }
+.col-results { width: 140px; }
+.col-result-links { width: 160px; }
 .col-links { width: 80px; text-align: center; }
 
 .table-row {
@@ -356,8 +357,9 @@ body {
   line-height: 1.5;
 }
 
-/* ─── RESULT CELL (Award + Links as Pills) ─── */
-.result-cell {
+/* ─── RESULT CELLS (Award + Link Pills) ─── */
+.results-cell,
+.result-links-cell {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
